@@ -286,11 +286,11 @@ zoomreset(const Arg *arg)
     }
 }
 
-void
-ttysend(const Arg *arg)
-{
-    ttywrite(arg->s, strlen(arg->s), 1);
-}
+// void
+// ttysend(const Arg *arg)
+// {
+//     ttywrite(arg->s, strlen(arg->s), 1);
+// }
 
 int
 evcol(XEvent *e)
