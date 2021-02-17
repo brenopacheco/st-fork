@@ -41,7 +41,7 @@ static void selpaste(const Arg *);
 static void zoom(const Arg *);
 static void zoomabs(const Arg *);
 static void zoomreset(const Arg *);
-static void ttysend(const Arg *);
+// static void ttysend(const Arg *);
 
 
 #endif /* !X */
