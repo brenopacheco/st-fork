@@ -11,8 +11,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+// static char *font = "TerminessTTF Nerd Font:pixelsize=18:antialias=true";
+// static char *font = "xos4 Terminus:size=12";
+static char *font = "FiraCode Nerd Font:size=11:style=regular:antialias=true";
+// static int borderpx = 6;
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -34,7 +37,6 @@ char *vtiden = "\033[?6c";
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
 static float chscale = 1.0;
-
 /*
  * word delimiter string
  *
@@ -66,7 +68,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
@@ -102,32 +104,33 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#011627", // black
+	"#ef5350", // red3
+	"#22da6e", // green3
+	"#addb67", // yellow3
+	"#82aaff", // blue2
+	"#c792ea", // magenta3
+	"#21c7a8", // cyan3
+	"#ffffff", // gray90
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#575656", // gray50
+	"#ef5350", // red
+	"#22da6e", // green
+	"#ffeb95", // yellow
+	"#82aaff", // #5c5cff
+	"#c792ea", // magenta
+	"#7fdbca", // cyan
+	"#ffffff", // white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#d6deeb",
+	"#011627",
+	"#d6deeb",
+	"#011627",
 };
-
 
 /*
  * Default colors (colorname index)
@@ -197,9 +200,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ ControlMask,          XK_plus,        zoom,           {.f = +1} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
+	{ ControlMask,          XK_equal,       zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },

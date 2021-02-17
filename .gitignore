@@ -2,6 +2,6 @@ st
 x.o
 TODO
 st.o
-st.info
 tags
 compile_commands.json
+.ccls-cache
