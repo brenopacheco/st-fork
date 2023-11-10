@@ -14,6 +14,11 @@
 // static char *font = "TerminessTTF Nerd Font:pixelsize=18:antialias=true";
 // static char *font = "xos4 Terminus:size=12";
 static char *font = "FiraCode Nerd Font:size=11:style=regular:antialias=true";
+static char *font2[] = {
+	"UbuntuMono Nerd Font:pixelsize=11:antialias=true:autohint=true",
+	"Ubuntu Nerd Font:pixelsize=11:antialias=true:autohint=true",
+	"Hack Nerd Font:pixelsize=11:antialias=true:autohint=true",
+};
 static int borderpx = 6;
 // static int borderpx = 0;
 
