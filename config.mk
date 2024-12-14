@@ -1,4 +1,4 @@
-VERSION = 0.8.4.r$(shell git rev-list --count HEAD).$(shell git rev-parse --short HEAD)
+VERSION = 0.8.r$(shell git rev-list --count HEAD).$(shell git rev-parse --short HEAD)
 
 X11INC = /usr/include/X11
 X11LIB = /usr/lib
