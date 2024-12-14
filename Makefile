@@ -28,6 +28,6 @@ dist: all
 	tar --append --file=st-${VERSION}.tar --transform 's,^,share/man/man1/,' --mode='644' st.1
 	tar --append --file=st-${VERSION}.tar --transform 's,^,share/licenses/st/,' --mode='644' LICENSE
 	tar --append --file=st-${VERSION}.tar --transform 's,^,share/st/,' --mode='644' st.info
-	gzip st-${VERSION}.tar
+	gzip -f st-${VERSION}.tar
 
 .PHONY: all clean dist
